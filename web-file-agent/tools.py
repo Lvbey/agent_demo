@@ -3,7 +3,6 @@
 The tools intentionally do not provide shell execution or arbitrary filesystem access.
 """
 import ipaddress
-import json
 import socket
 from pathlib import Path
 from typing import Any, Dict, List
@@ -37,7 +36,7 @@ TOOL_DEFINITIONS = [
             "description": "List entries in a directory inside the agent workspace. Use '.' for the workspace root.",
             "parameters": {
                 "type": "object",
-                "properties": {"path": {"type": "string", "description": "Workspace-relative directory path", "default": "."}},
+                "properties": {"path": {"type": "string", "description": "Workspace-relative directory path"}},
                 "required": ["path"],
                 "additionalProperties": False,
             },
